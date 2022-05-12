@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   #この表記によってcontact_path(/contact)やcontact_url(ドメイン名/contact)
   get  '/signup',  to: 'users#new'
+  resources :users
 end
