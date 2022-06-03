@@ -17,6 +17,11 @@ class ActiveSupport::TestCase
    def log_in_as(user)
     session[:user_id] = user.id
    end
+  
+  # テストユーザーとしてログインする
+  def log_in_as(user)
+    session[:user_id] = user.id
+  end
 end
 
 class ActionDispatch::IntegrationTest

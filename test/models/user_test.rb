@@ -73,6 +73,10 @@ class UserTest < ActiveSupport::TestCase
     end
   end
   
+   test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
+  
   test "should follow and unfollow a user" do
     michael = users(:michael)
     archer  = users(:archer)
